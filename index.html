@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <title>Digital Currencies</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="a nonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1> CryptoCurrencies</h1>
+    </div>
+    <div class="parallax"> </div>
+    <div id="container">
+        <div class="fullManu row">
+            <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+                <li class="nav-item col-12 col-sm-12 col-md-6 col-lg-2" role="presentation">
+                    <a class="nav-link active btn btn-outline-dark menuButtons homeButton" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item col-6 col-sm-6 col-md-3 col-lg-2" role="presentation">
+                    <a class="nav-link btn btn-outline-dark menuButtons reportsButton" id="pills-reports-tab" data-bs-toggle="pill" href="#pills-reports" role="tab" aria-controls="pills-reports" aria-selected="false">Live Reports</a>
+                </li>
+                <li class="nav-item col-6 col-sm-6 col-md-3 col-lg-2" role="presentation">
+                    <a class="nav-link btn btn-outline-dark menuButtons aboutButton" id="pills-about-tab" data-bs-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="false">About</a>
+                </li>
+                <li class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <form class="d-flex searchField">
+                        <input class="form-control me-2 bg-transparent" id="searchBox" required type="search" placeholder="Insert Some Details To Search" aria-label="Search" maxlength="20">
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div id="searchResultsNum"></div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+            <div class="tab-pane fade" id="pills-reports" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+            <div class="tab-pane fade row" id="pills-about" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div id="aboutHeader">
+                    <h3>About Me:</h3>
+                </div>
+                <div class="containerAbout row">
+                    <div class="accordion accordion-flush col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7" id="accordionCv">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <strong> Who I Am ? </strong> 
+                            </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionCv">
+                                <div class="accordion-body">
+                                    <p>
+                                        <span><strong> First Name: </strong> Elon </br></span>
+                                        <span><strong> Last Name: </strong> Hezi </br></span>
+                                    </p>
+                                    <p>
+                                        I'm 24 years old,</br>
+                                        I have served in the IDF for the past five years.</br>
+                                        Undergraduate student in management information systems.</br>
+                                        </br>
+                                        <strong>FullStack Development.</br></strong>
+                                        </br>
+                                        <strong>Technologies:</br></strong>
+                                        HTML, CSS3, JAVASCRIPT, TYPESCRIPT, JQUERY, AJAX, REACT, PYTHON.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <strong> About this project: </strong> 
+                            </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionCv">
+                                <div class="accordion-body">
+                                    <P>
+                                        <strong>Technologies that this project uses:</strong></br> HTML, CSS3, JAVASCRIPT, JQUERY, AJAX.</br>
+                                        <strong>Some of the features that can be found in Crypto Currencies include: </br></strong>
+                                        - Expandable information per coin on the homepage(click on "more info"). <br>
+                                        - Search field (on keyup). <br>
+                                        - Coins favorites by click on toggle switch. <br>
+                                        Select up to 5 coins to display in the live report with tapping switch button. <br>
+                                        If you would like to choose a sixth, you'll have to replace one of your currently selected coins with a new one.
+                                    </P>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <strong> Contact Us </strong>
+                            </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionCv">
+                                <div class="accordion-body">
+                                    <p><span><strong> Email: </strong> elhezi119@gmail.com </br></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5" id="aboutImg">
+                        <img src="assets/images/ElonHezi.jpeg" alt="...">
+                    </div>
+                </div>
+            </div>
+        <div id="modal" class="modal" tabindex="-1"></div></div>     
+    </div>   
+    
+</body>
+</html>
