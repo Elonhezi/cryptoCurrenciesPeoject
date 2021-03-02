@@ -272,7 +272,7 @@ $(function() {
             }
             else {
                 displayAllDetails(fullDetails);            
-                // $("#searchBox").focus();
+                $("#searchBox").focus();
                 // $("#searchBox").removeClass("bg-transparent").css("background-color", "#ff8080");
             }
         });
