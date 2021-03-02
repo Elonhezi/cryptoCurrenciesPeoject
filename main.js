@@ -1,6 +1,7 @@
 /// <reference path="jquery-3.5.1.js" />
 "use strict";  
 
+const arrOfToggleButton = [];
 $(function() {  
     // get data from ajax on currencies:
     $(document).ready(async function() {
@@ -51,6 +52,11 @@ $(function() {
                 </div>    
             </div>
         </div>`);
+        // check swich Button Always:
+        // if(arrOfToggleButton.includes(details.symbol)) {
+        //     enableButtonChoose(details.symbol);
+        // }
+        enableSwitchButtonOnArrayModal(details.symbol);
     }
     
     // get more data from ajax on click on "more info button":
@@ -151,7 +157,7 @@ $(function() {
         return arrOfToggleButton.findIndex(item => item === currencySymbol);
     }
     // new array to save for the modal after pressing on more then 5 buttons switch as enable
-    const arrOfToggleButton = [];
+    // const arrOfToggleButton = [];
 
     function checkValidButtonToggle(currencySymbol) {
         const index = findIndexCoinFromArray(currencySymbol);
@@ -257,13 +263,17 @@ $(function() {
             let coinNameSymbol = "";
             let index = 0;
             if(searchedCoin !== "") {
+                /////////////////////////////////////
                 $("#pills-home").empty();
                 for(let i = 1300; i <= 1400; i++) {
                     coinNameSymbol = fullDetails[i].symbol;
                     if(coinNameSymbol.includes(searchedCoin)){
                         counterResultSearch += 1; // number of search results...
                         index = "index" + i;
-                        displayCurrencies(fullDetails[i] , index);   
+                        displayCurrencies(fullDetails[i] , index);
+                        // if(arrOfToggleButton.includes(coinNameSymbol)) {
+                        //     enableButtonChoose(coinNameSymbol);
+                        // }
                     }   
                 }
                 displaySearchCounter(fullDetails , searchedCoin , counterResultSearch) // Show results number of searching and display the value that inserted..
@@ -302,4 +312,11 @@ $(function() {
     $(".reportsButton").on("click", function() {
         $("#searchResultsNum").empty();
     });
+
+    // checck on display card if inculde on array of modal: 
+    function enableSwitchButtonOnArrayModal(coinSymbol) {
+        if(arrOfToggleButton.includes(coinSymbol)) {
+            enableButtonChoose(coinSymbol);
+        }
+    }
 });
