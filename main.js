@@ -53,10 +53,9 @@ $(function() {
             </div>
         </div>`);
         // check swich Button Always:
-        // if(arrOfToggleButton.includes(details.symbol)) {
-        //     enableButtonChoose(details.symbol);
-        // }
-        enableSwitchButtonOnArrayModal(details.symbol);
+        if(arrOfToggleButton.includes(details.symbol)) {
+            enableButtonChoose(details.symbol);
+        }
     }
     
     // get more data from ajax on click on "more info button":
@@ -156,9 +155,8 @@ $(function() {
     function findIndexCoinFromArray(currencySymbol){
         return arrOfToggleButton.findIndex(item => item === currencySymbol);
     }
-    // new array to save for the modal after pressing on more then 5 buttons switch as enable
-    // const arrOfToggleButton = [];
-
+    
+    // save in array for the modal after pressing on more then 5 buttons switch as enable
     function checkValidButtonToggle(currencySymbol) {
         const index = findIndexCoinFromArray(currencySymbol);
         if(index !== -1 ) {
@@ -263,7 +261,6 @@ $(function() {
             let coinNameSymbol = "";
             let index = 0;
             if(searchedCoin !== "") {
-                /////////////////////////////////////
                 $("#pills-home").empty();
                 for(let i = 1300; i <= 1400; i++) {
                     coinNameSymbol = fullDetails[i].symbol;
@@ -271,9 +268,6 @@ $(function() {
                         counterResultSearch += 1; // number of search results...
                         index = "index" + i;
                         displayCurrencies(fullDetails[i] , index);
-                        // if(arrOfToggleButton.includes(coinNameSymbol)) {
-                        //     enableButtonChoose(coinNameSymbol);
-                        // }
                     }   
                 }
                 displaySearchCounter(fullDetails , searchedCoin , counterResultSearch) // Show results number of searching and display the value that inserted..
@@ -305,18 +299,11 @@ $(function() {
         }
     }
 
-    // on click on button about or reports- clear the box of search result:
+    // on click on button about or reports- clear the box of search results:
     $(".aboutButton").on("click", function() {
         $("#searchResultsNum").empty();
     });
     $(".reportsButton").on("click", function() {
         $("#searchResultsNum").empty();
     });
-
-    // checck on display card if inculde on array of modal: 
-    function enableSwitchButtonOnArrayModal(coinSymbol) {
-        if(arrOfToggleButton.includes(coinSymbol)) {
-            enableButtonChoose(coinSymbol);
-        }
-    }
 });
