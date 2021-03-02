@@ -252,13 +252,13 @@ $(function() {
     function searchingCurrencies(fullDetails) {
         $("#searchBox").on("keyup" , async function() { 
             const searchedCoin = $('#searchBox').val().toLowerCase();   // get value from input field search
-            deleteValueSearch();
+            // deleteValueSearch();
             $("#searchResultsNum").empty();
             let counterResultSearch = 0;
             let coinNameSymbol = "";
             let index = 0;
             if(searchedCoin !== "") {
-                $("#searchBox").addClass("bg-transparent");
+                // $("#searchBox").addClass("bg-transparent");
                 $("#pills-home").empty();
                 for(let i = 1300; i <= 1400; i++) {
                     coinNameSymbol = fullDetails[i].symbol;
@@ -273,7 +273,7 @@ $(function() {
             else {
                 displayAllDetails(fullDetails);            
                 $("#searchBox").focus();
-                $("#searchBox").removeClass("bg-transparent").css("background-color", "#ff8080");
+                // $("#searchBox").removeClass("bg-transparent").css("background-color", "#ff8080");
             }
         });
     }   
@@ -300,11 +300,11 @@ $(function() {
     }
     
     // delete the value from search input
-    function deleteValueSearch() {
-        setTimeout(() => {
-            $('#searchBox').val("");
-        }, 7000);
-    }
+    // function deleteValueSearch() {
+    //     setTimeout(() => {
+    //         $('#searchBox').val("");
+    //     }, 7000);
+    // }
 
     // on click on button about or reports- clear the box of search result:
     $(".aboutButton").on("click", function() {
